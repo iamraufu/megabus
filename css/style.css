@@ -6,13 +6,19 @@
     list-style-type: none;
 }
 
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    background: url("../images/bus.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: scroll;
+    background: url(../images/bus.png);
     background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
 }
 
 nav {
@@ -125,8 +131,16 @@ a.active {
     color: #3352F2;
     font-size: 30px;
     padding: 2px;
-    margin: 10px 10px 0px 0px;
+    margin: 10px;
     word-spacing: 20px;
+    border: none;
+    background-color: white;
+}
+
+.plus-minus-btn,
+input,
+.btn-style {
+    outline: none;
 }
 
 .btn-style {
