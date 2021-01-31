@@ -40,4 +40,5 @@ function getInputValue(ticket) {
 
 function confirmMessage() {
     confirm("You have purchased " + parseInt(document.getElementById('first-class-count').value) + " First Class tickets and " + parseInt(document.getElementById('economy-count').value) + " Economy Class Tickets." + " Your Subtotal price is $" + document.getElementById('sub-total').innerText + ", Tax $" + document.getElementById('tax-amount').innerText + " and Total Price is $" + document.getElementById('grand-total').innerText);
+    location.reload();
 }
