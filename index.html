@@ -41,80 +41,82 @@
 
             <div class="inputs">
                 <div class="input-group">
-                    <label " for=" ">From</label>
-                    <input class="inp-style " type="text " name=" " placeholder="Dhaka ">
+                    <label for="from">From</label>
+                    <input class="inp-style" type="text" name="from" placeholder="Dhaka">
                 </div>
-                <div class="input-group ">
-                    <label" for="">From</label>
-                    <input class="inp-style" type="text" name="" placeholder="Chittagone">
+                <div class="input-group">
+                    <label for="to">To</label>
+                    <input class="inp-style" type="text" name="to" placeholder="Chittagong">
                 </div>
             </div>
 
             <div class="inputs">
                 <div class="input-group">
-                    <label " for=" ">Departure</label>
-                    <input class="inp-style " type="date " name=" ">
+                    <label for="departure">Departure</label>
+                    <input class="inp-style" type="date" name="start" min="2021-02-28" value="2021-02-01">
                 </div>
-                <div class="input-group ">
-                    <label for=" ">Return</label>
-                    <input class="inp-style " type="date " name=" ">
-                </div>
-            </div>
-            <div class="inputs ">
-                <div class="input-group f-class ">
-                <div>
-                    <label for=" ">First Class ($150)</label>
-                    <input class="inp-style inp-width " type="number " name=" ">
-                </div>
-                <div class="plus-minus-btn ">
-                    <p>+ -</p>
+                <div class="input-group">
+                    <label for="return">Return</label>
+                    <input class="inp-style" type="date" name="return">
                 </div>
             </div>
-                <div class="input-group f-class ">
+            <div class="inputs">
+                <div class="input-group f-class">
                     <div>
-                        <label for=" ">Economy ($100)</label>
-                        <input class="inp-style inp-width " type="number " name=" ">
+                        <label for="first-class">First Class ($150)</label>
+                        <input class="inp-style inp-width " type="number " name="first-class" id="first-class-count" value="2">
                     </div>
-                    <div class="plus-minus-btn ">
-                        <p> <span>+</span> <span>-</span> </p>
+                    <div class="plus-minus-btn">
+                        <button onclick="handleTicketChange('first-class',false)" class="plus-minus-btn"><p><span>-</span></p></button>
+                        <button onclick="handleTicketChange('first-class',true)" class="plus-minus-btn"><p><span>+</span></p></button>
+                    </div>
+                </div>
+                <div class="input-group f-class">
+                    <div>
+                        <label for="economy">Economy ($100)</label>
+                        <input class="inp-style inp-width" type="number" name="economy" id="economy-count" value="2">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <button onclick="handleTicketChange('economy',false)" class="plus-minus-btn"><p><span>-</span></p></button>
+                        <button onclick="handleTicketChange('economy',true)" class="plus-minus-btn"><p><span>+</span></p></button>
                     </div>
                 </div>
 
             </div>
-            <div class="calculations ">
-                <div class="amount ">
-                    <div class="left ">
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
                         <p>Subtotal</p>
                     </div>
-                    <div class="right ">
-                        <p>$500</p>
+                    <div class="right">
+                        <p>$<span id="sub-total">500</span></p>
                     </div>
                 </div>
 
-                <div class="amount ">
-                    <div class="left ">
+                <div class="amount">
+                    <div class="left">
                         <p>Charge 10% VAT</p>
                     </div>
-                    <div class="right ">
-                        <p>$50</p>
+                    <div class="right">
+                        <p>$<span id="tax-amount">50</span></p>
                     </div>
                 </div>
                 <hr>
-                <div class="amount ">
-                    <div class="left ">
+                <div class="amount">
+                    <div class="left">
                         <h4>Total</h4>
                     </div>
-                    <div class="right ">
-                        <p>$550</p>
+                    <div class="right">
+                        <p>$<span id="grand-total">550</span></p>
                     </div>
                 </div>
             </div>
-            <button class="btn-style ">Book Now</button>
+            <button onclick="confirmMessage()" class="btn-style">Book Now</button>
         </div>
     </main>
 
     <!--Script-->
-    <script src="js/script.js "></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
